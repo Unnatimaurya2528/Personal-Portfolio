@@ -47,8 +47,15 @@ section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--acc
 .meta{color:var(--muted);font-size:14px;margin-top:6px}
 .footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding:10px}
 
+/* Hero & Quick Facts */
+.hero-container{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:2rem;}
+.hero-card{padding:18px;border-radius:var(--radius);background:var(--glass);box-shadow:var(--card-shadow);}
+.quick-facts{padding:18px;border-radius:var(--radius);background:var(--glass);box-shadow:var(--card-shadow);}
+.quick-facts h3{margin-bottom:8px;color:var(--accent2);}
+.quick-facts .skills{flex-wrap:wrap;gap:8px;margin-top:6px;}
+
 /* responsive */
-@media(max-width:920px){.grid{grid-template-columns:1fr}.nav{display:none}}
+@media(max-width:920px){.grid{grid-template-columns:1fr}.nav{display:none}.hero-container{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -76,21 +83,18 @@ section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--acc
   </nav>
 </header>
 
-<!-- Hero Section with Quick Facts -->
-<section style="display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start;">
-  <!-- Main Intro -->
-  <div>
+<!-- Hero + Quick Facts -->
+<div class="hero-container">
+  <div class="hero-card">
     <div class="tag">Student Portfolio</div>
     <h2>Learning Today, Becoming My Best Self, Leading Tomorrow</h2>
     <p>Hi! I’m <strong>Unnati Maurya</strong>, a 16-year-old Class 11 (PCB) student at Sunbeam School Robertsganj. Driven by curiosity, creativity, and a desire to build — whether through stories, public speaking, or web projects. I blend imagination with growing technical skills and a goal-led mindset to create meaningful work.</p>
     <div class="meta">Location: Sonbhadra, Uttar Pradesh • Email: <a href="mailto:unnati.maurya2528@gmail.com">unnati.maurya2528@gmail.com</a></div>
   </div>
-
-  <!-- Quick Facts Glass Card -->
-  <aside class="card" style="background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);padding:20px;">
-    <h3 style="margin:0 0 10px;">Quick Facts</h3>
-    <div class="meta">Public speaking • Creative writing • Beginner web coder • Debater • Leadership • HTML/CSS/JS basics</div>
-    <div class="skills" style="margin-top:12px">
+  <div class="quick-facts">
+    <h3>Quick Facts</h3>
+    <p class="meta">Public speaker • Storyteller • Beginner web coder • Debater • Creative writer</p>
+    <div class="skills">
       <div class="skill">Public speaking</div>
       <div class="skill">Creative writing</div>
       <div class="skill">HTML</div>
@@ -98,8 +102,8 @@ section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--acc
       <div class="skill">JavaScript (basic)</div>
       <div class="skill">Leadership</div>
     </div>
-  </aside>
-</section>
+  </div>
+</div>
 
 <!-- About -->
 <section id="about">
@@ -190,33 +194,24 @@ section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--acc
   <div class="card">
     <h3>Short-Term Goals</h3>
     <ul>
-      <li>Excel in Science by strengthening concepts and scoring high marks.</li>
-      <li>Improve handwriting and overall presentation to make my work neat and impressive.</li>
-      <li>Qualify all online and offline tests/quizzes with excellent grades through consistent preparation.</li>
-      <li>Enhance overall academic performance by studying regularly and smartly.</li>
-      <li>Learn new languages to improve communication skills and expand global understanding.</li>
-      <li>Gain deeper knowledge of computers, including digital tools, coding, and technology basics.</li>
-      <li>Improve my poetry skills and grow creatively as a writer.</li>
-      <li>Write 100 poems and work toward publishing my own poetry collection.</li>
-      <li>Improve coding skills by building small, creative web development projects.</li>
-      <li>Strengthen academics in Classes 11 and 12 with disciplined study and conceptual clarity.</li>
-      <li>Participate more in debates, competitions, and creative events to build confidence and stage presence.</li>
-      <li>Continue improving handwriting and overall presentation, making notes attractive and organized.</li>
+      <li>Excel in Science and academics.</li>
+      <li>Improve handwriting and presentation.</li>
+      <li>Qualify online and offline tests/quizzes.</li>
+      <li>Learn new languages and improve communication skills.</li>
+      <li>Develop web projects and coding skills.</li>
+      <li>Write 100 poems and grow creatively.</li>
+      <li>Participate in debates and competitions.</li>
     </ul>
   </div>
   <div class="card">
     <h3>Long-Term Goals</h3>
     <ul>
-      <li>Become a successful businesswoman, leading with confidence, innovation, and integrity.</li>
-      <li>Travel the world and explore different cultures, traditions, and experiences.</li>
-      <li>Open an orphanage to provide care, education, and opportunities for children in need.</li>
-      <li>Take challenging classes that help me grow academically and push my abilities.</li>
-      <li>Meet my idols and inspirations who motivate me to dream bigger.</li>
-      <li>Become a successful author and poet, writing lines that touch hearts and inspire people.</li>
-      <li>Serve as a senior teacher—at least for one year—in my current school to guide and mentor younger students.</li>
-      <li>Fulfill all the wishes of my parents as well as my own aspirations through hard work and success.</li>
-      <li>Help reduce unemployment by supporting others with opportunities, training, and guidance.</li>
-      <li>Start my own MNC (Multinational Company) and build a global presence with strong values.</li>
+      <li>Become a successful businesswoman.</li>
+      <li>Travel the world and explore cultures.</li>
+      <li>Open an orphanage and provide education.</li>
+      <li>Become a published author and poet.</li>
+      <li>Start my own multinational company.</li>
+      <li>Serve as a mentor or teacher to guide others.</li>
     </ul>
   </div>
 </div>
@@ -237,7 +232,7 @@ section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--acc
   <li>Most Innovative Child – 2 times</li>
   <li>1st Rank in Hindi Poetry – 2 times</li>
   <li>1st Rank in English Poetry – 3 times</li>
-  <li>Academic Excellence: Scored 91.4% in High School Board Exams</li>
+  <li>Academic Excellence: 91.4% in High School Board Exams</li>
 </ul>
 </section>
 
@@ -264,42 +259,73 @@ section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--acc
 <h2>Work</h2>
 <p><strong>Website:</strong> <a href="https://unnatimaurya2528.github.io/UnnatiMaurya_Portfolio/index.html" target="_blank">Current Portfolio Website</a></p>
 <p><strong>Poetry:</strong></p>
+
 <div class="card">
 <h3>Those Days</h3>
-<p>All the birds flew away,<br>
-Bowling as I watch 'em go<br>
-The empty nests the still domain, no I can't take it anymore.<br>
-The birds weren't pretty anyway,<br>
-But at least they came on the way<br>
-With their Wings, they would hide,<br>
-All the dark bitter side.<br>
-Now the birds are long gone,<br>
-I am here all alone,<br>
-With no one beside me to meet,<br>
-On the path I put my feet.</p>
+<pre>All the birds flew away,
+Bowling as I watch 'em go
+The empty nests the still domain, no
+I can't take it anymore.
+The birds weren't pretty anyway,
+But at least they came on the way
+With their Wings, they would hide,
+All the dark bitter side.
+Now the birds are long gone,
+I am here all alone,
+With no one beside me to meet,
+On the path I put my feet.</pre>
 </div>
 
 <div class="card">
 <h3>Double Dice</h3>
-<p>I rolled the dice, Not once but twice.<br>
-The first was light,<br>
-It told me lies.<br>
-The second fell,<br>
-But made no sound.<br>
-A door was there,<br>
-No walls around.</p>
+<pre>I rolled the dice, Not once but twice.
+The first was light,
+It told me lies.
+The second fell, But made no sound.
+A door was there, No walls around.</pre>
 </div>
 
 <div class="card">
 <h3>Double Dice (pt.2)</h3>
-<p>I rolled the dice, Not once but twice.<br>
-One kissed the flame,<br>
-A whisper bled,<br>
-One slept in ice.<br>
-A silence spoke.<br>
-The game was rigged<br>
-Yet still, I woke.</p>
+<pre>I rolled the dice, Not once but twice.
+One kissed the flame,
+A whisper bled,
+One slept in ice.
+A silence spoke.
+The game was rigged
+Yet still, I woke.</pre>
 </div>
 
 <div class="card">
 <h3>Desires</h3>
+<pre>Dangerous desires dance,
+Draped in dusk,
+Shadows' sinister song
+Silences Trust...
+
+Is it passion, or poison art?
+A dangerous thief of soul & heart.</pre>
+</div>
+
+<p><strong>Books:</strong></p>
+<ul>
+<li><a href="https://www.bribooks.com/bookstore/kidnapped-by-a-psycho-" target="_blank">Kidnapped by a Psycho</a></li>
+<li><a href="https://www.bribooks.com/bookstore/dare-for-" target="_blank">Dare For</a></li>
+</ul>
+
+<p><strong>Quotes:</strong></p>
+<p>Embedded PDF (Upload your quotes PDF in the same folder):</p>
+<iframe src="quotes.pdf" width="100%" height="400px" style="border:1px solid #00f0ff;border-radius:10px;"></iframe>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:unnati.maurya2528@gmail.com">unnati.maurya2528@gmail.com</a></p>
+<p class="meta">(This is a public portfolio — avoid sharing sensitive personal details.)</p>
+</section>
+
+<div class="footer">© <strong>Unnati Maurya</strong> — Portfolio. Built with care.</div>
+</div>
+</body>
+</html>
