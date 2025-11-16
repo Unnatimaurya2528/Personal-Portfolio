@@ -2,50 +2,286 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unnati Maurya — Home</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unnati Maurya — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent1:#00f0ff;
+  --accent2:#8a2be2;
+  --bg1: linear-gradient(135deg,#0f0f1f,#1a1a2e);
+  --glass: rgba(0,0,0,0.55);
+  --muted:#a0a0b0;
+  --card-shadow: 0 10px 30px rgba(0,0,50,0.4);
+  --radius:14px;
+  --maxw:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,Arial;background:var(--bg1);color:#e0e0f0;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+/* header */
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;position:sticky;top:0;background:rgba(15,15,31,0.85);backdrop-filter:blur(6px);z-index:999;}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;box-shadow:0 8px 30px rgba(0,240,255,0.4)}
+.brand h1{margin:0;font-size:20px;color:white}
+.tagline{font-size:13px;color:var(--muted)}
+.nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.nav a{color:#c0c0ff;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600;transition:all .18s}
+.nav a:hover{background:rgba(0,255,255,0.1);transform:translateY(-2px)}
+.cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:9px 14px;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(0,240,255,0.2)}
+
+/* sections */
+section{margin:2rem 0;padding:2rem;background:var(--glass);backdrop-filter:blur(6px);border-radius:var(--radius);box-shadow:var(--card-shadow)}
+section h2{color:var(--accent1);margin-bottom:12px;text-shadow:0 0 6px var(--accent1);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:#111122;border-radius:var(--radius);padding:18px;box-shadow:0 8px 26px rgba(0,0,50,0.4)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.skill{background:linear-gradient(90deg,#001122,#003366);padding:8px 12px;border-radius:999px;font-weight:700;color:#00f0ff;cursor:default;transition:all .18s}
+.skill:hover{transform:translateY(-3px)}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;margin-top:10px}
+.btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;font-weight:700}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-ghost{background:#111122;border:1px solid rgba(0,255,255,0.2);color:#00f0ff;font-weight:700}
+.btn-ghost:hover{transform:translateY(-3px)}
+.meta{color:var(--muted);font-size:14px;margin-top:6px}
+.footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding:10px}
+
+/* responsive */
+@media(max-width:920px){.grid{grid-template-columns:1fr}.nav{display:none}}
+</style>
 </head>
 <body>
-<header>
-<nav>
-  <div class="logo">UNNATI MAURYA</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="education.html">Education</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="goals.html">Goals</a></li>
-    <li><a href="achievements.html">Achievements</a></li>
-    <li><a href="participation.html">Participation</a></li>
-    <li><a href="work.html">Work</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <button id="navToggle">☰</button>
-</nav>
-</header>
-<main>
-<section class="hero">
-  <h1>Unnati Maurya</h1>
-  <div class="tagbox">Student Portfolio</div>
-  <p>Learning Today, Becoming My Best Self, Leading Tomorrow</p>
-  <div class="intro">
-    <p>I'm Unnati Maurya, a 16-year-old Class 11 (PCB) student at Sunbeam School Robertsganj. I'm driven by curiosity, creativity, and a desire to build—whether through stories, public speaking, or web projects. I blend imagination with growing technical skills and a goal-led mindset to create meaningful work.</p>
-    <p>Location: Sonbhadra, Uttar Pradesh · <a href="mailto:unnati.maurya2528@gmail.com">unnati.maurya2528@gmail.com</a></p>
+<div class="container">
+
+<!-- Header -->
+<header class="header">
+  <div class="brand">
+    <div class="logo">UM</div>
+    <div>
+      <h1>Unnati Maurya</h1>
+      <div class="tagline">Learning Today, Becoming My Best Self, Leading Tomorrow</div>
+    </div>
   </div>
-  <aside class="quick-facts">
-    <h4>Quick Facts</h4>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#strengths">Strengths</a>
+    <a href="#goals">Goals</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#participation">Participation</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section>
+  <div class="tag">Student Portfolio</div>
+  <h2>Learning Today, Becoming My Best Self, Leading Tomorrow</h2>
+  <p>Hi! I’m <strong>Unnati Maurya</strong>, a 16-year-old Class 11 (PCB) student at Sunbeam School Robertsganj. Driven by curiosity, creativity, and a desire to build — whether through stories, public speaking, or web projects. I blend imagination with growing technical skills and a goal-led mindset to create meaningful work.</p>
+  <div class="meta">Location: Sonbhadra, Uttar Pradesh • Email: <a href="mailto:unnati.maurya2528@gmail.com">unnati.maurya2528@gmail.com</a></div>
+</section>
+
+<!-- About -->
+<section id="about">
+<h2>About Me</h2>
+<p>Hello! I’m <strong>Unnati Maurya</strong>, a curious, imaginative, and determined 16-year-old currently studying in Class 11 (PCB) at Sunbeam School Robertsganj. My learning journey has been shaped not only by academics but also by a wide spectrum of experiences that constantly push me to grow—debates that sharpen my logic, stage performances that strengthen my confidence, and story-writing competitions that allow my creativity to breathe freely. Every event I participate in becomes a stepping stone, helping me evolve into someone who can communicate clearly, think deeply, and express ideas with both clarity and emotion.</p>
+<p>I have always found comfort and inspiration in the world of books—whether it's fiction that paints new universes or general knowledge that reveals the hidden wonders of the real one. Writing stories and poems is my personal way of exploring thoughts, emotions, and possibilities; words feel like threads, and I love weaving them into meaningful experiences.</p>
+<p>Recently, I stepped into the dynamic world of web development. For me, coding is more than a skill—it's a beautiful fusion of creativity and logic. Watching an idea transform into a living, interactive webpage feels almost magical. Every project I build teaches me something new, and the process inspires me to imagine bigger, bolder digital creations.</p>
+<p>I am deeply passionate about storytelling and public speaking, two art forms that help me connect with people, share perspectives, and express myself with confidence and empathy. These skills have taught me that ideas gain power when communicated well.</p>
+<p>My short-term goals revolve around strengthening my academics, refining my understanding of science, and completing impactful digital projects that reflect both creativity and precision.</p>
+<p>In the long run, I envision myself growing into an entrepreneur—someone who leads with innovation, discipline, and compassion. I aspire to build ideas that matter, create solutions that inspire, and carve a path where imagination and hard work walk side by side.</p>
+</section>
+
+<!-- Education -->
+<section id="education">
+<h2>Education</h2>
+<div class="grid">
+  <div class="card">
+    <h3>KG & Early Years</h3>
+    <p class="meta"><strong>The Eden Public School, Adalhat, Mirzapur</strong> — Kindergarten foundation years. Early learning emphasized play, curiosity, and basic social skills.</p>
+  </div>
+  <div class="card">
+    <h3>Class 1 – 10</h3>
+    <p class="meta"><strong>Sunbeam School Robertsganj, Sonbhadra</strong> — Primary & middle schooling where I participated in events, built reading habits, and developed stage confidence, art & sports interest, and teamwork.</p>
+  </div>
+  <div class="card">
+    <h3>Class 11 (PCB)</h3>
+    <p class="meta"><strong>Sunbeam School Robertsganj</strong> — Current studies in Physics, Chemistry, Biology. This stage focuses my academic goals and prepares me for competitive tests and project work (BNAT qualified; ASSET cleared).</p>
+    <div class="meta">Schooling helped me develop public speaking, leadership, presentation skills, and time management.</div>
+  </div>
+</div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Technical Skills</h3>
     <ul>
-      <li>Public Speaking</li>
-      <li>Creative Writing</li>
+      <li>HTML</li>
       <li>CSS (basic)</li>
       <li>JavaScript (basic)</li>
-      <li>Leadership</li>
-      <li>HTML</li>
+      <li>PPT designing</li>
+      <li>Canva designing</li>
     </ul>
-  </aside>
+  </div>
+  <div class="card">
+    <h3>Creative & Soft Skills</h3>
+    <ul>
+      <li>Poetry & story writing</li>
+      <li>Debating & public speaking</li>
+      <li>Singing & stage performance</li>
+      <li>Leadership & teamwork</li>
+      <li>Communication & problem-solving</li>
+    </ul>
+  </div>
+</div>
 </section>
-</main>
-<script src="script.js"></script>
-</body>
-</html>
+
+<!-- Strengths & Weaknesses -->
+<section id="strengths">
+<h2>Strengths & Weaknesses</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Strengths</h3>
+    <ul>
+      <li>Clear communication & stage confidence</li>
+      <li>Curiosity & fast learning</li>
+      <li>Creativity (stories, arts, crafts)</li>
+      <li>Consistency & discipline</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Weaknesses</h3>
+    <ul>
+      <li>Tendency to overthink</li>
+      <li>Being overly self-critical</li>
+      <li>Occasional nervousness before big events (working to improve)</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- Goals -->
+<section id="goals">
+<h2>Goals</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Short-Term Goals</h3>
+    <ul>
+      <li>Excel in Science by strengthening concepts and scoring high marks.</li>
+      <li>Improve handwriting and overall presentation to make my work neat and impressive.</li>
+      <li>Qualify all online and offline tests/quizzes with excellent grades through consistent preparation.</li>
+      <li>Enhance overall academic performance by studying regularly and smartly.</li>
+      <li>Learn new languages to improve communication skills and expand global understanding.</li>
+      <li>Gain deeper knowledge of computers, including digital tools, coding, and technology basics.</li>
+      <li>Improve my poetry skills and grow creatively as a writer.</li>
+      <li>Write 100 poems and work toward publishing my own poetry collection.</li>
+      <li>Improve coding skills by building small, creative web development projects.</li>
+      <li>Strengthen academics in Classes 11 and 12 with disciplined study and conceptual clarity.</li>
+      <li>Participate more in debates, competitions, and creative events to build confidence and stage presence.</li>
+      <li>Continue improving handwriting and overall presentation, making notes attractive and organized.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Long-Term Goals</h3>
+    <ul>
+      <li>Become a successful businesswoman, leading with confidence, innovation, and integrity.</li>
+      <li>Travel the world and explore different cultures, traditions, and experiences.</li>
+      <li>Open an orphanage to provide care, education, and opportunities for children in need.</li>
+      <li>Take challenging classes that help me grow academically and push my abilities.</li>
+      <li>Meet my idols and inspirations who motivate me to dream bigger.</li>
+      <li>Become a successful author and poet, writing lines that touch hearts and inspire people.</li>
+      <li>Serve as a senior teacher—at least for one year—in my current school to guide and mentor younger students.</li>
+      <li>Fulfill all the wishes of my parents as well as my own aspirations through hard work and success.</li>
+      <li>Help reduce unemployment by supporting others with opportunities, training, and guidance.</li>
+      <li>Start my own MNC (Multinational Company) and build a global presence with strong values.</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements">
+<h2>Achievements</h2>
+<ul>
+  <li>BYJU’S Super League – 2 times</li>
+  <li>BNAT (BYJU’S National Aptitude Test) – 11 times</li>
+  <li>Asset Test – 5 times</li>
+  <li>Non-Thermal Cooking Competition – 2 times</li>
+  <li>Ardent Reader Award – 9 times</li>
+  <li>Best Online Etiquettes – 2 times</li>
+  <li>Best in Art & Craft – 3 times</li>
+  <li>Best in Sports – 3 times</li>
+  <li>Most Innovative Child – 2 times</li>
+  <li>1st Rank in Hindi Poetry – 2 times</li>
+  <li>1st Rank in English Poetry – 3 times</li>
+  <li>Academic Excellence: Scored 91.4% in High School Board Exams</li>
+</ul>
+</section>
+
+<!-- Participation -->
+<section id="participation">
+<h2>Participation</h2>
+<ul>
+  <li>Annual Sports Meet – 6 times</li>
+  <li>Annual Function – 5 times</li>
+  <li>School Super League BYJU’S (2018–19)</li>
+  <li>Asset Test – 5 times</li>
+  <li>Science Project Competition (DAV)</li>
+  <li>VVM 2024 (Vidyarthi Vigyan Manthan)</li>
+  <li>Independence Day Performances – Music & Dance</li>
+  <li>Republic Day Performances – Music & Dance</li>
+  <li>National Young Authors Fair (2023–24 & 2024–25)</li>
+  <li>Rendezvous – Sunbeam School Event</li>
+  <li>Non-Thermal Cooking Competition – 2 times</li>
+</ul>
+</section>
+
+<!-- Work -->
+<section id="work">
+<h2>Work</h2>
+<p><strong>Website:</strong> <a href="https://unnatimaurya2528.github.io/UnnatiMaurya_Portfolio/index.html" target="_blank">Current Portfolio Website</a></p>
+<p><strong>Poetry:</strong></p>
+<div class="card">
+<h3>Those Days</h3>
+<p>All the birds flew away, Bowling as I watch 'em go The empty nests the still domain, no I can't take it anymore. The birds weren't pretty anyway, But at least they came on the way With their Wings, they would hide, All the dark bitter side. Now the birds are long gone, I am here all alone, With no one beside me to meet, On the path I put my feet.</p>
+</div>
+<div class="card">
+<h3>Double Dice</h3>
+<p>I rolled the dice, Not once but twice. The first was light, It told me lies. The second fell, But made no sound. A door was there, No walls around.</p>
+</div>
+<div class="card">
+<h3>Double Dice (pt.2)</h3>
+<p>I rolled the dice, Not once but twice. One kissed the flame, A whisper bled, One slept in ice. A silence spoke. The game was rigged Yet still, I woke.</p>
+</div>
+<div class="card">
+<h3>Desires</h3>
+<p>Dangerous desires dance, Draped in dusk, Shadows' sinister song Silences Trust... Is it passion, or poison art? A dangerous thief of soul & heart.</p>
+</div>
+
+<p><strong>Books:</strong></p>
+<ul>
+<li><a href="https://www.bribooks.com/bookstore/kidnapped-by-a-psycho-" target="_blank">Kidnapped by a Psycho</a></li>
+<li><a href="https://www.bribooks.com/bookstore/dare-for-" target="_blank">Dare For</a></li>
+</ul>
+
+<p><strong>Quotes:</strong></p>
+<p>Embedded PDF (Upload your quotes PDF in the same folder):</p>
+<iframe src="quotes.pdf" width="100%" height="400px" style="border:1px solid #00f0ff;border-radius:10px;"></iframe>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:unnati.maurya2528@gmail.com">unnati.maurya2528@gmail.com</a></p>
+<p class="meta">(This is a public portfolio — avoid sharing sensitive personal details.)</p>
+</section>
+
+<div class="footer">© <strong>Unnati Maurya</strong> — Portfolio. Built with care.</div>
+
+</div>
